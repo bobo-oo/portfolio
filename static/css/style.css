@@ -1,0 +1,350 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@font-face {
+    font-family: "Harlow_Solid_Italic";
+    src: url(/static/fonts/harlow_solid_italic.woff);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #D8D8D8;
+    font-size: 15px;
+    background-color: #1F1F1F;
+}
+::-moz-selection { /* Code for Firefox */
+    color: #1F1F1F;
+    background: #FAFAFA;
+}
+
+::selection {
+    color: #1F1F1F;
+    background: #FAFAFA;
+}
+a, a:hover, a:focus {
+    /*color: #FAFAFA;*/
+    color: #D8D8D8;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.title {
+    font-family: "Harlow_Solid_Italic";
+    font-size: 30px;
+    text-transform:capitalize;
+}
+.content-title {
+    padding-left: 1rem;
+    padding-top: 2rem;
+    font-family: "Harlow_Solid_Italic";
+    font-size: 30px;
+    text-transform:capitalize;
+    text-align: center;
+}
+.content-description {
+    /*padding-top: 1rem;*/
+    padding: 1rem 2rem 0rem;
+}
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.page .page_content {
+    margin-top: 5rem;
+    min-height: 475px;
+    background-color: #1F1F1F;
+    border-radius: 50px;
+    background: linear-gradient(315deg, #1c1c1c, #212121);
+    box-shadow: -41px -41px 82px #1a1a1a, 
+                41px 41px 82px #242424;
+}
+#home .home-nav-content {
+    box-shadow: 0px;
+    border-radius: 0px;
+    height: 100%;
+    margin-top: 5rem;
+    float: right;
+    padding-right: 2rem;
+}
+#home .page-content{
+    margin-top: 5rem;
+}
+.nav_container {
+    position: fixed;
+    float: right;
+    bottom: 0;
+    transition: width 1s, height 1s;
+    text-align: center;
+    width: 100%;
+}
+.nav-btn {
+    top: 0;
+    right: 0;
+    position: fixed;
+    margin: 1.5rem 1.5rem 0rem;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    transition: margin-right 0.5s ease-in-out;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: transparent;
+    color: #FAFAFA;
+    display: none;
+    
+}
+.nav-btn.active {
+    display: block;
+}
+.nav-btn:hover, .home-btn:hover, .contact-btn:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake_hover 1s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+.nav-btn.scroll {
+    display: block;
+    background: linear-gradient(315deg, #2d2d2f, #363638);
+    box-shadow: -20px -20px 60px #2b2b2c, 
+                20px 20px 60px #3a3a3c;
+}
+#nav_content {
+    background: linear-gradient(145deg, #1c1c1c, #212121);
+    width: 100%;
+    padding-top: 3rem;
+    height: 100vh;
+    display: none;
+}
+.nav-item:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake_hover 1s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+.nav-item.active {
+    animation: .4s shake infinite alternate;
+}
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }s
+}
+@keyframes shake_hover {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.skillbar {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+}
+.skills {
+    font-size: 0.75rem;
+    padding: 2rem;
+}
+.skill-attribute {
+    margin-top: 0.5rem;
+}
+.skillbar-bar {
+    margin-top: 0.5rem;
+    height: 5px;
+    background-color: #BDBDBD;
+    border-radius: 3px;
+}
+.skillbar-percent {
+    font-size: 0.75rem;
+    text-align: right;
+}
+.skillbar-bar .skillbar-value {
+    background-color: #FAFAFA;
+    border-radius: 3px;
+    height: 100%;
+}
+.home-btn {
+    bottom:0;
+    right: 0;
+    position: fixed;
+    margin: 0rem 1.5rem 1.5rem;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    transition: margin-right 0.5s ease-in-out;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: none;
+    color: #FAFAFA;
+    border-radius: 50px;
+    background: linear-gradient(315deg, #2d2d2f, #363638);
+    box-shadow: -20px -20px 60px #2b2b2c, 
+                20px 20px 60px #3a3a3c;
+}
+.home-btn.scroll {
+    display: block;
+}
+}
+.scale-up-tl {
+    -webkit-animation: scale-up-tl 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-tl 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-7-22 0:32:39
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-up-tl
+ * ----------------------------------------
+ */scale-up-tl {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-up-tl {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+.carousel-item {
+    height: 375px;
+    padding: 3rem 5rem 2rem;
+
+}
+.resume-title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.resume-role {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.resume-description {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+}
+.content-about-profile {
+    margin: 2rem;
+}
+.content-contact-descrption {
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.content-contact-descrption span, .content-contact-descrption a {
+    font-size: 1rem;
+}
+.nav_icon {
+    display: none;
+}
+.nav_icon.active {
+    display: inline-block;
+}
+.wordCarousel {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: "Harlow_Solid_Italic";
+}
+.wordCarousel div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 5rem;
+    }
+.wordCarousel li {
+    height: 45px;
+    margin-bottom: 45px;
+    display: block;
+}
+.wordCarousel .flip4 {
+    padding: 0rem 1rem;
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip3 {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+    0% { margin-top: -360px; }
+    5% { margin-top: -270px; }
+    25% { margin-top: -270px; }
+    30% { margin-top: -180px; }
+    50% { margin-top: -180px; }
+    55% { margin-top: -90px; }
+    75% { margin-top: -90px; }
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+.contact-btn {
+    float: right;
+    margin: 2rem 4rem;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    transition: margin-right 0.5s ease-in-out;
+    height: 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #FAFAFA;
+    border-radius: 15px;
+    background: #323234;
+    box-shadow:  20px 20px 60px #2b2b2c;
+}
